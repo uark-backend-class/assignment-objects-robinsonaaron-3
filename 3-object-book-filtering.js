@@ -16,3 +16,26 @@ The function should return:
   { title: "The Hitchhiker's Guide to the Galaxy", author: "Douglas Adams", year: 1979 }
 ]
 */
+
+function filterBooks(books) {
+  let modernBooks = [];
+
+  for (let i = 0; i < books.length; i++) {
+    if (books[i].year >= 1950) {
+      modernBooks.push(books[i]);
+    }
+  }
+
+  return modernBooks;
+}
+
+let library = [
+  { title: "The Catcher in the Rye", author: "J.D. Salinger", year: 1951 },
+  { title: "To Kill a Mockingbird", author: "Harper Lee", year: 1960 },
+  { title: "1984", author: "George Orwell", year: 1949 },
+  { title: "The Hitchhiker's Guide to the Galaxy", author: "Douglas Adams", year: 1979 }
+];
+
+console.log(filterBooks(library));
+
+// library.filter(book => book.age >= 1950);

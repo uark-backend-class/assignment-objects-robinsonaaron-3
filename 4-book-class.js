@@ -32,3 +32,24 @@
  *    console.log(myBook.getBookInfo());  // "Harry Potter by J.K. Rowling, published in 1997"
  *    console.log(myBook.getAge());       // Assuming the current year is 2024, "27 years old"
  */
+
+class Book {
+  constructor(title, author, year) {
+    this.title = title;
+    this.author = author;
+    this.year = year;
+  }
+
+  getBookInfo() {
+    return `${this.title} by ${this.author}, published in ${this.year}`;
+  }
+
+  getAge() {
+    const CURRENT_YEAR = new Date().getFullYear();
+    return CURRENT_YEAR - this.year;
+  }
+}
+
+const myBook = new Book("Harry Potter", "J.K. Rowling", 1997);
+console.log(myBook.getBookInfo());
+console.log(myBook.getAge());
